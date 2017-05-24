@@ -34,7 +34,7 @@ function getRegistry() {
 	var loc = prompt('What is the location of the startmstsc.cmd file? (without file-name and without trailing slash)', 'C:\\Apps');
 	if(loc) {
 		loc = loc.replace('\\\\', '\\').replace('\\', '\\\\');
-		save('rdp-uri.reg', '{{rdp-uri.reg}}')
+		save('rdp-uri.reg', '{{rdp-uri.reg}}'.replace('{{path}}', loc));
 	}
 }
 </script>
@@ -54,7 +54,7 @@ For more information and the source, visit <a href="https://github.com/jorik90/l
 <h2>Installation</h2>
 Drag the block below to your bookmarks-bar, so it will add a new bookmark.<br />
 
-<a class="block" href="javascript:!function(){function a(a,b){var c=a;-1===a.indexOf(&quot;.&quot;)&&(c=b);var d=c.match(/\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b/);if(d)return d[0];var e=c.match(/\/v[: ]([^\s]+)/i);return e?e[1]:c}if(location.href.indexOf(&quot;bookmarks.html&quot;)>-1)return void alert(&quot;Niet op klikken! Je moet deze knop naar je bookmarks slepen&quot;);if(&quot;object&quot;!=typeof LPDialog)return void alert(&quot;Open je LastPass vault&quot;);var b=$(&quot;.dialog:visible&quot;);if(0===b.length)return void alert(&quot;Geen site geselecteerd&quot;);var c,d,e,f,g;switch(b.attr(&quot;id&quot;)){case&quot;noteDialog&quot;:e=$(&quot;#noteForm .dialogInput:nth(1)&quot;).val(),f=$(&quot;#noteForm .dialogInput:nth(2)&quot;).val(),c=a($(&quot;#noteForm .dialogInput:nth(0)&quot;).val(),$(&quot;#noteForm .dialogInput:nth(3)&quot;).val())}d=c.split(&quot;:&quot;),d.length>1?(c=d[0],g=d[1]):g=3389;var h=c+&quot;///&quot;+e+&quot;///&quot;+f+&quot;///&quot;+g;chrome.tabs.create({url:&quot;http://example.com&quot;},function(a){var b=&quot;\t\tsetTimeout(function() {\t\tvar elm = document.getElementsByTagName('div')[0];\t\telm.parentNode.removeChild(elm);\t\t},0);\t\tvar fired = false;\t\tvar fallbackFunc = function() {\t\t\tif(fired) { return; }\t\t\tfired = true;\t\t\talert('Kan de RDP-sessie niet starten. Waarschijnlijk heb je het rdp-protocol niet. Voeg deze toe aan je register.');\t\t\twindow.close();\t\t};\t\tvar fallbackTimeout = setTimeout(fallbackFunc, 2500);\t\twindow.addEventListener('blur', function (evt) {\t\t\tclearTimeout(fallbackTimeout);\t\t\twindow.addEventListener('focus', function(){\twindow.close() });\t\t});\t\tlocation.href = 'rdp:///&quot;+h+&quot;';&quot;;chrome.tabs.executeScript(a.id,{code:b})})}();">LastPass RDP</a>
+<a class="block" href="javascript:{{bookmarklet.js}}">LastPass RDP</a>
 <br /><br />
 
 Download <code>startmstsc.cmd</code>. Save this file to a location and remember the location. Do not change the filename:<br />

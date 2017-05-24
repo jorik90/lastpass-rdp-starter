@@ -1,6 +1,6 @@
 (function() {
-	if(location.href.indexOf('bookmarks.html') > -1) {
-		alert('Niet op klikken! Je moet deze knop naar je bookmarks slepen');
+	if(location.href.indexOf('lastpass-rdp-starter.html') > -1 || location.href.indexOf('github.io') > -1) {
+		alert('Do not click, but drag this button to your bookmarks-bar.');
 		return;
 	}
 	function getHostname(naamvanhost, notities) {
@@ -22,13 +22,13 @@
 	}
 	
 	if(typeof(LPDialog) !== "object") {
-		alert('Open je LastPass vault')
+		alert('You can only use this bookmarklet inside your LastPass vault.');
 		return;
 	}
 	
 	var dialog = $('.dialog:visible');
 	if(dialog.length === 0) {
-		alert('Geen site geselecteerd');
+		alert('Please select a site first.');
 		return;
 	}
 	
@@ -36,9 +36,9 @@
 	
 	switch(dialog.attr('id')) {
 		case 'noteDialog':
-			user = $('#noteForm .dialogInput:nth(1)').val()
-			pass = $('#noteForm .dialogInput:nth(2)').val()
-			server = getHostname($('#noteForm .dialogInput:nth(0)').val(), $('#noteForm .dialogInput:nth(3)').val())
+			user = $('#noteForm .dialogInput:nth(1)').val();
+			pass = $('#noteForm .dialogInput:nth(2)').val();
+			server = getHostname($('#noteForm .dialogInput:nth(0)').val(), $('#noteForm .dialogInput:nth(3)').val());
 			break;
 		case 'siteDialog':
 			break;
