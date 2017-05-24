@@ -1,0 +1,14 @@
+; Registry file for creating rdp-uri-protocol
+; see https://jorik90.github.io/lastpass-rdp-starter/
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\rdp]
+@="URL:RDP protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\rdp\shell]
+
+[HKEY_CLASSES_ROOT\rdp\shell\open]
+
+[HKEY_CLASSES_ROOT\rdp\shell\open\command]
+@="\"{{path}}\\startmstsc.cmd\" \"%1\""
