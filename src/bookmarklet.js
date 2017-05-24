@@ -76,10 +76,4 @@
 		chrome.tabs.executeScript(tab.id, { code: c });
 		
 	});
-	// Oude methode, bovenstaande werkt ook en is vereist geen lokale site.
-	// $('#jorikform').remove();
-	// $('body').append('<form id="jorikform" method="post" action="http://localhost:88/rdp.ashx" target="jorikwindow"><input type="hidden" name="serversettings" value="" id="jorikserversettings" /></form>')
-	// $('#jorikserversettings').val();
-	// window.open('', 'jorikwindow')
-	// document.getElementById('jorikform').submit()
 })()
