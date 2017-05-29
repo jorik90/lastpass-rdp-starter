@@ -9,7 +9,7 @@
 			findHostIn = notities;
 		}
 		
-		var ipregx = findHostIn.match(/\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b/);
+		var ipregx = findHostIn.match(/\b((?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.(?:25[0-5]|2[0-4]\d|[01]?\d\d?)\.(?:25[0-5]|2[0-4]\d|[01]?\d\d?))(?::(\d{2,5}))?\b/);
 		if(ipregx) {
 			return ipregx[0];
 		}
