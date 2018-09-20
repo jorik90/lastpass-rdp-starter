@@ -1,0 +1,8 @@
+{
+  "name": "Lastpass RDP starter",
+  "version": "0.1",
+  "description": "Extends the Developer Tools, adding a sidebar that can start a RDP session from Lastpass.",
+  "devtools_page": "devtools.html",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
