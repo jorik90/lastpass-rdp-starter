@@ -2,7 +2,7 @@
 This "utility" combines a few techniques to be able to start a RDP-session directly from your LastPass vault in Google Chrome under Windows.
 
 # Update september 2018
-It looks like it is no longer possible to exeucte Javascript using a bookmarklet in an extension. To work around this, I've created a very basic Chrome developer tools extension. This adds an entry 'Lastpass RDP starter' to the developer tools. Starting a RDP session is a bit harder: you have to press F12 and click on the 'Lastpass RDP starter'-tab in the devtools. The URI-protocol and cmd script are still required.
+It looks like it is no longer possible to exeucte Javascript using a bookmarklet in an extension. To work around this, I've created a very basic Chrome developer tools extension. This adds an entry 'Lastpass RDP starter' to the developer tools. Starting a RDP session is a bit harder: you have to press F12 and click on the 'Lastpass RDP starter'-tab in the devtools. The URI-protocol and cmd script are still required. I've published the extension here: https://chrome.google.com/webstore/detail/gjpgmdpemafnpfdhhdmmphkpaffldnid
 
 ## Installation
 Steps for installation can be found on the generated HTML file hosted here: https://jorik90.github.io/lastpass-rdp-starter/.
